@@ -3,8 +3,9 @@ import numpy as np
 import math as mt
 import streamlit as st
 
-option1=st.checkbox('Drag')
-#option2=st.checkbox('Projectile')
+
+option1=st.checkbox('Drag force proportional to $v^2$')
+option2=st.checkbox('Drag force proportional to $v$')
 option3=st.checkbox('Thermodynamics')
 option4=st.checkbox('Heat Engine')
 
@@ -12,15 +13,15 @@ if option1:
     st.title('DRAG FORCE ON A FALLING BODY')
     st.header('',divider='rainbow')
     #DRAG FORCE
-    D = st.number_input('Enter the Drag Coefficient',min_value=0.001)
-    m = st.number_input('Enter the mass',min_value=0.001)
-    g = st.number_input('Enter the gravitational accleration value',min_value=0.001)
+    D = st.number_input('Enter the Drag Coefficient',min_value=0.001,key="1")
+    m = st.number_input('Enter the mass',min_value=0.001,key="2")
+    g = st.number_input('Enter the gravitational accleration value',min_value=0.001,key="3")
     Y=[0]
     t1=0
     t2=10
     n = 10000
     h = (t2-t1)/n
-    A=st.number_input('Enter area of cross section of object',min_value=0.001)
+    A=st.number_input('Enter area of cross section of object',min_value=0.001,key="4")
 
     t = [t1]
     Vy = [0]
@@ -34,6 +35,43 @@ if option1:
         i+=1
 
     plt.plot(t,Vy)
+    plt.xlabel('t')
+    plt.ylabel('v')
+    plt.grid()
+    plt.title('Velocity vs Time')
+    plt.savefig('drag.jpg')
+    st.image('drag.jpg')
+
+if option2:
+    st.title('DRAG FORCE ON A FALLING BODY')
+    st.header('', divider='rainbow')
+    # DRAG FORCE
+    D1 = st.number_input('Enter the Drag Coefficient', min_value=0.001)
+    m1 = st.number_input('Enter the mass', min_value=0.001)
+    g1 = st.number_input('Enter the gravitational accleration value', min_value=0.001)
+    Y = [0]
+    t1 = 0
+    t2 = 10
+    n = 10000
+    h = (t2 - t1) / n
+    A1 = st.number_input('Enter area of cross section of object', min_value=0.001)
+
+    t = [t1]
+    Vy = [0]
+
+
+    def f1(v):
+        value=g1-(A1*D1*v)/(2*m1)
+        return value
+
+
+    i = 0
+    while i <= n:
+        t.append(t[i] + h)
+        Vy.append(Vy[i] + h * f1(Vy[i]))
+        i += 1
+
+    plt.plot(t, Vy)
     plt.xlabel('t')
     plt.ylabel('v')
     plt.grid()
