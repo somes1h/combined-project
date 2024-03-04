@@ -39,8 +39,8 @@ if option1:
     plt.ylabel('v')
     plt.grid()
     plt.title('Velocity vs Time')
-    plt.savefig('drag.jpg')
-    st.image('drag.jpg')
+    plt.savefig('drag1.jpg')
+    st.image('drag1.jpg')
 
 if option2:
     st.title('DRAG FORCE ON A FALLING BODY')
@@ -76,8 +76,8 @@ if option2:
     plt.ylabel('v')
     plt.grid()
     plt.title('Velocity vs Time')
-    plt.savefig('drag.jpg')
-    st.image('drag.jpg')
+    plt.savefig('drag2.jpg')
+    st.image('drag2.jpg')
 #plt.show()
 
 #========================================================
