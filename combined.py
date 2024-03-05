@@ -5,7 +5,7 @@ import streamlit as st
 
 st.header('Mechanical opposing force and Laws of Thermodynamics')
 st.subheader('Drag force is a mechanical force that acts opposite to the relative motion of any object moving with respect to a surrounding fluid.')
-
+st.image("drag.jpg")
 option1=st.checkbox('Drag force proportional to $v^2$')
 option2=st.checkbox('Drag force proportional to $v$')
 option3=st.checkbox('Thermodynamics')
