@@ -3,6 +3,8 @@ import numpy as np
 import math as mt
 import streamlit as st
 
+st.header('Mechanical opposing force and Laws of Thermodynamics')
+st.subheader('Drag force is a mechanical force that acts opposite to the relative motion of any object moving with respect to a surrounding fluid.')
 
 option1=st.checkbox('Drag force proportional to $v^2$')
 option2=st.checkbox('Drag force proportional to $v$')
