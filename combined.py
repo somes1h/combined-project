@@ -3,7 +3,7 @@ import numpy as np
 import math as mt
 import streamlit as st
 
-st.header('Mechanical opposing force and Laws of Thermodynamics')
+st.title('Mechanical opposing force and Laws of Thermodynamics')
 option1=st.checkbox('Drag force proportional to $v^2$')
 option2=st.checkbox('Drag force proportional to $v$')
 option3=st.checkbox('Thermodynamics')
