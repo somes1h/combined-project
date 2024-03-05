@@ -7,7 +7,7 @@ st.header('Mechanical opposing force and Laws of Thermodynamics')
 option1=st.checkbox('Drag force proportional to $v^2$')
 option2=st.checkbox('Drag force proportional to $v$')
 option3=st.checkbox('Thermodynamics')
-option4=st.checkbox('Heat Engine'))
+option4=st.checkbox('Heat Engine')
 if option1:
     st.title('DRAG FORCE ON A FALLING BODY FOR $v^2$')
     st.header('',divider='rainbow')
