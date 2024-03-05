@@ -4,16 +4,17 @@ import math as mt
 import streamlit as st
 
 st.header('Mechanical opposing force and Laws of Thermodynamics')
-st.subheader('Drag force is a mechanical force that acts opposite to the relative motion of any object moving with respect to a surrounding fluid.')
-st.image("drag.jpg")
+
 option1=st.checkbox('Drag force proportional to $v^2$')
 option2=st.checkbox('Drag force proportional to $v$')
 option3=st.checkbox('Thermodynamics')
 option4=st.checkbox('Heat Engine')
 
 if option1:
-    st.title('DRAG FORCE ON A FALLING BODY')
+    st.title('DRAG FORCE ON A FALLING BODY FOR $v^2$')
     st.header('',divider='rainbow')
+    st.subheader('Drag force is a mechanical force that acts opposite to the relative motion of any object moving with respect to a surrounding fluid.')
+    st.image("drag.jpg")
     #DRAG FORCE
     D = st.number_input('Enter the Drag Coefficient',min_value=0.001,key="1")
     m = st.number_input('Enter the mass',min_value=0.001,key="2")
@@ -45,8 +46,10 @@ if option1:
     st.image('drag1.jpg')
 
 if option2:
-    st.title('DRAG FORCE ON A FALLING BODY')
+    st.title('DRAG FORCE ON A FALLING BODY FOR $v$')
     st.header('', divider='rainbow')
+    st.subheader('Drag force is a mechanical force that acts opposite to the relative motion of any object moving with respect to a surrounding fluid.')
+    st.image("drag.jpg")
     # DRAG FORCE
     D1 = st.number_input('Enter the Drag Coefficient', min_value=0.001)
     m1 = st.number_input('Enter the mass', min_value=0.001)
