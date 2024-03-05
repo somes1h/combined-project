@@ -95,7 +95,7 @@ if option3:
     import matplotlib.pyplot as plt
     import streamlit as st
     
-    process=st.radio("Select the process",["Isothermal","Adiabatic","Isobaric","Isochoric","All"])
+    process=st.sidebar.radio("Select the process",["Isothermal","Adiabatic","Isobaric","Isochoric","All"])
     
     #isothermal
     
